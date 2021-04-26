@@ -12,11 +12,11 @@ public class DialogueManager : MonoBehaviour
   //for animating the dialogue box opening and closing
   public Animator animator;
 
-  private Queue<string> sentences;
+  private Queue<string> sentenceQueue;
 
   // Start is called before the first frame update
   void Start() {
-    sentences = new Queue<string>();
+    sentenceQueue = new Queue<string>();
   }
 
   public void StartDialogue(Dialogue dialogue) {
@@ -25,32 +25,32 @@ public class DialogueManager : MonoBehaviour
       GameObject.Find("chungus").GetComponent<Move>().enabled = false;
       //open dialogue box on screen using unity animator
       animator.SetBool("IsOpen", true);
-      
+    }
       CharaName.text = dialogue.name;
-      sentences.Clear();
+      sentenceQueue.Clear();
       
       foreach (string sentence in dialogue.sentences)
       {
         Debug.Log("queueing sentence: " + sentence + "\n");
-        sentences.Enqueue(sentence);
+        sentenceQueue.Enqueue(sentence);
       }
-    }
+    
     DisplayNextSentence();
   }
 
   public void DisplayNextSentence() {
-    if (sentences.Count == 0) {
+    if (sentenceQueue.Count == 0) {
       EndDialogue();
       return;
     }
 
-    string sentence = sentences.Dequeue();
+    string sentence = sentenceQueue.Dequeue();
     Debug.Log("dequeueing sentence: " + sentence + "\n");
     
     dialogueText.text = sentence;
     //used for enabling the typewriter effect 
-    //StopAllCoroutines(); //prevents overlapping text from people trying to skip text
-    //StartCoroutine(TypeSentence(sentence));
+    StopAllCoroutines(); //prevents overlapping text from people trying to skip text
+    StartCoroutine(TypeSentence(sentence));
   }
 
   //typewriter effect
@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
   }
 
   // Update is called once per frame
-  void Update()
+  /*void Update()
   {
     if (Input.GetKeyDown(KeyCode.Return)) {
       DisplayNextSentence();
@@ -78,5 +78,5 @@ public class DialogueManager : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Space)) {
       DisplayNextSentence();
     }
-  }
+  }*/
 }

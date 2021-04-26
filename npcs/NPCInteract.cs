@@ -9,16 +9,19 @@ public class NPCInteract : MonoBehaviour
   //for passing in simple dialogue lines
   public DialogueTrigger dialogueTrigger;
 
+  private bool nearNPC = false;
+
   void OnTriggerEnter(Collider collider) {
     if (collider.gameObject.tag == "Player") {
       //display button prompt
       animator.SetBool("nearbyNPC", true);
+      nearNPC = true;
     }
   }
 
-  void OnTriggerStay(Collider collider) {
+  void Update() {
     //if player is in range of npc
-    if (collider.gameObject.tag == "Player") {
+    if (nearNPC) {  
       if (Input.GetKeyDown(KeyCode.E)) {
         dialogueTrigger.TriggerDialogue();
       }
@@ -29,6 +32,7 @@ public class NPCInteract : MonoBehaviour
     if (collider.gameObject.tag == "Player") {
       //remove button prompt
       animator.SetBool("nearbyNPC", false);
+      nearNPC = false;
     }
   }
 }
