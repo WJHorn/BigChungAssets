@@ -49,8 +49,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -151,15 +149,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5072}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 5236}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,9 +244,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4022}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -343,15 +341,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 4366}
+      Script: {instanceID: 4368}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5202}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5284}
     - Class: 114
-      Script: {instanceID: 67252}
+      Script: {instanceID: 63550}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -464,17 +462,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3930}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4196}
     - Class: 114
-      Script: {instanceID: 4444}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4446}
     - Class: 114
-      Script: {instanceID: 4940}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 4942}
     - Class: 114
-      Script: {instanceID: 67542}
+      Script: {instanceID: 5284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -569,11 +567,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 4560}
+      Script: {instanceID: 4562}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 4922}
+      Script: {instanceID: 4924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1333,6 +1331,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: faf8eec794e250fc2cae4c72c08d44c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LordFarquaadmusicTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1787,12 +1791,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
-  - hash:
-      serializedVersion: 2
-      Hash: faf8eec794e250fc2cae4c72c08d44c1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LordFarquaadmusicTrigger
   platform: 5
   scenePathNames:
   - Assets/assets-william/MainMenu/Menu.unity
@@ -1800,4 +1798,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/BigFungus-Kyle.unity
   - Assets/Scenes/Shreck-Dominic.unity
   - Assets/Scenes/BiggerChungus-Chase.unity
-  playerPath: F:/BigChungus/BigChungAssets/builds/New Unity Project.exe
+  playerPath: F:/School/2021/Spring2021/SeniorSeminar/BigChungDev/BigChungBuild/New
+    Unity Project.exe
