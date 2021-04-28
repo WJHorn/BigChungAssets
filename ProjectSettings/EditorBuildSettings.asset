@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/assets-william/MainMenu/Menu.unity
+    guid: 61b6ff58b4e704c4c8860acb1fb71af5
+  - enabled: 1
+    path: Assets/Scenes/mainHub-William.unity
+    guid: c1f8f5dd6a99ca04dbbae577d5978758
+  - enabled: 1
+    path: Assets/Scenes/BigFungus-Kyle.unity
+    guid: a2f9eb02c81084526a0d53bec9261cbb
+  - enabled: 1
+    path: Assets/Scenes/Shreck-Dominic.unity
+    guid: 8022235a5c819d44c945422c355b2440
+  - enabled: 1
+    path: Assets/Scenes/BiggerChungus-Chase.unity
+    guid: fa80eca5dfbff4daca754e9cb3c9cec0
   m_configObjects: {}

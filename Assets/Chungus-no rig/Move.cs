@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-   
+   public AudioSource jumpSound;
+   //public AudioSource walkSound;
+   //public AudioSource runSound;
    public CharacterController controller;
    public Transform cam;
    
@@ -23,6 +25,9 @@ public class Move : MonoBehaviour
    bool isGrounded;
    Vector3 velocity;
    
+   void Start() {
+      Cursor.visible = false;
+   }
    // Update is called once per frame
    void Update() {
       isGrounded = Physics.CheckSphere(groundCheck.position, groundDist, groundMask);
@@ -47,9 +52,11 @@ public class Move : MonoBehaviour
          
          if (running) {
             controller.Move(moveDirection.normalized * runSpeed * Time.deltaTime);
+            //runSound.Play();
          }
          else if (!running) {
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
+            //walkSound.Play();
          }
       }
       
@@ -58,6 +65,7 @@ public class Move : MonoBehaviour
       }
       
       if (Input.GetButtonDown("Jump") && isGrounded) {
+         jumpSound.Play();
          velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
       }
         

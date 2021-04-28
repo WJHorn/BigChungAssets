@@ -5,6 +5,7 @@ using UnityEngine;
 public class reachCarrot : MonoBehaviour
 {
    public Transform shrek;
+   public GameObject RGC;
    public float speed;
    private bool triggered = false;
     void OnTriggerEnter(Collider triggerObject)
@@ -22,6 +23,7 @@ public class reachCarrot : MonoBehaviour
             foreach(GameObject go in barrels){
                 Destroy(go);
             }
+            RGC.SetActive(true);
         }
     }
 
@@ -36,7 +38,9 @@ public class reachCarrot : MonoBehaviour
             shrek.rotation = Quaternion.RotateTowards(shrek.rotation, targetRotation, step*8);
            
             shrek.position = Vector3.MoveTowards(shrek.position, targetPosition, step);
+            
         }
+        
     }
 
 }

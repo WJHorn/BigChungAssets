@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
-   //public AudioSource collectSound;
+   public AudioSource collectSound;
    public DemoScore score;
    
    void OnTriggerEnter(Collider collider) {
-      if (collider.gameObject.tag == "Player") {
-         //collectSound.Play();
+      if (collider.tag == "Player") {
+         
+         collectSound.Play();
          score.carrots += 1;
          Destroy (gameObject);
       }

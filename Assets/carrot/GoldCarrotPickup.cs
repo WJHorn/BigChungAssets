@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class GoldCarrotPickup : MonoBehaviour
 {
-   //public AudioSource collectSound;
+   public AudioSource collectSound;
    
    void OnTriggerEnter(Collider collider) {
       if (collider.gameObject.tag == "Player") {
-        //collectSound.Play();
+        collectSound.Play();
         gameObject.SetActive(false);
+        SceneManager.LoadScene(1);
       }
    }
 }
