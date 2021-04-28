@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class triggerShrek : MonoBehaviour
 {
+    public AudioSource shrekThemeSong;
     public Transform shrek;
     //public Spawn _spawnScript;
     public GameObject spawnObject;
@@ -15,6 +16,7 @@ public class triggerShrek : MonoBehaviour
         if (triggered)
             return;
         triggered = true;
+        shrekThemeSong.Play();
         //spawnObject.GetComponent<Spawn>().enabled = true;
         Instantiate(spawnObject,new Vector3(0,0,0),Quaternion.identity); 
 

@@ -1,15 +1,15 @@
 sceneSetups:
 - path: Assets/assets-william/MainMenu/Menu.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
 - path: Assets/Scenes/mainHub-William.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/BigFungus-Kyle.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Shreck-Dominic.unity
   isLoaded: 0

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+  public AudioSource textDisplayAudio;
+
   //GUI fields
   public Text CharaName;
   public Text dialogueText;
@@ -56,8 +58,13 @@ public class DialogueManager : MonoBehaviour
   //typewriter effect
   IEnumerator TypeSentence(string sentence) {
     dialogueText.text = "";
+      textDisplayAudio.Play();
     foreach (char letter in sentence.ToCharArray())
-    {
+    {      
+      if (!textDisplayAudio.isPlaying) {
+        textDisplayAudio.Play();
+      }
+      //textDisplayAudio.loop = true;
       dialogueText.text += letter;
       yield return null;  //waits a single frame
     }
