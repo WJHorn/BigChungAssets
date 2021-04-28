@@ -1,0 +1,17 @@
+sceneSetups:
+- path: Assets/Scenes/mainHub-William.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/BigFungus-Kyle.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/BiggerChungus-Chase.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Shreck-Dominic.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
